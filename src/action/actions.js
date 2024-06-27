@@ -24,10 +24,11 @@ export const fetchDataFailure = (error) => {
 export const fetchData = () => {
     return (dispatch) => {
         dispatch(fetchDataRequest());
-        axios.get('https://dummyjson.com/products/1')
+        axios.get('https://dummyjson.com/products')
             .then(response => {
                 const data = response.data;
                 dispatch(fetchDataSuccess(data));
+                console.log(response)
             })
             .catch(error => {
                 dispatch(fetchDataFailure(error.message));

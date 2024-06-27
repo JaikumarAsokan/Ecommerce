@@ -1,10 +1,11 @@
 import React from "react";
 import DataComponent from "./components/DataComponent";
+import appCSS from "./App.module.css"
 
 function App() {
   return (
-    <div>
-      <h1>Grocery</h1>
+    <div className={appCSS.ap}>
+      <h1>E - commerce</h1>
       <DataComponent/>
     </div>
   );
